@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Collage Romántico</title>
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: Arial, 'Segoe UI', sans-serif;
+    }
+    .collage-container {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      padding-top: 60px;
+    }
+    .foto-box {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      filter: drop-shadow(0 0 20px #00f8);
+      animation: aparecer 2s;
+    }
+    .foto-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 2px solid #fff2;
+      box-shadow: 0 4px 32px #00f8, 0 2px 8px #222;
+    }
+    .foto-text {
+      margin-top: 6px;
+      color: #dff;
+      font-size: 1.1em;
+      text-shadow: 0 2px 8px #00f8, 0 1px 1px #000;
+      text-align: center;
+      font-weight: 500;
+    }
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-40px) scale(0.9);}
+      to   { opacity: 1; transform: translateY(0) scale(1);}
+    }
+    @media (max-width: 600px) {
+      .foto-img { width: 80px; height: 80px; }
+      .foto-text { font-size: 0.9em;}
+    }
+    .central-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 18px #00f8, 0 2px 8px #222;
+      pointer-events: none;
+      z-index: 100;
+      animation: centralFade 4s forwards;
+    }
+    @keyframes centralFade {
+      0% { opacity: 0;}
+      15% { opacity: 1;}
+      85% { opacity: 1;}
+      100% { opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="collage-container">
+    <div class="foto-box" style="top: 20px; left: 60px;">
+      <img src="img/1.jpg" class="foto-img" />
+      <div class="foto-text">I love you so much baby</div>
+    </div>
+    <div class="foto-box" style="top: 140px; left: 220px;">
+      <img src="img/2.jpg" class="foto-img" />
+      <div class="foto-text">Te amo mi niña</div>
+    </div>
+    <div class="foto-box" style="top: 280px; left: 110px;">
+      <img src="img/3.jpg" class="foto-img" />
+      <div class="foto-text">Siempre juntos</div>
+    </div>
+    <div class="foto-box" style="top: 400px; left: 320px;">
+      <img src="img/4.jpg" class="foto-img" />
+      <div class="foto-text">Te extraño</div>
+    </div>
+    <div class="foto-box" style="top: 100px; left: 420px;">
+      <img src="img/5.jpg" class="foto-img" />
+      <div class="foto-text">Nuestra aventura</div>
+    </div>
+    <div class="foto-box" style="top: 270px; left: 520px;">
+      <img src="img/6.jpg" class="foto-img" />
+      <div class="foto-text">Tus abrazos</div>
+    </div>
+    <div class="foto-box" style="top: 370px; left: 180px;">
+      <img src="img/7.jpg" class="foto-img" />
+      <div class="foto-text">Tus besos</div>
+    </div>
+    <div class="foto-box" style="top: 200px; left: 600px;">
+      <img src="img/8.jpg" class="foto-img" />
+      <div class="foto-text">Sonrisas juntos</div>
+    </div>
+    <div class="foto-box" style="top: 360px; left: 700px;">
+      <img src="img/9.jpg" class="foto-img" />
+      <div class="foto-text">Recuerdos únicos</div>
+    </div>
+    <div class="foto-box" style="top: 50px; left: 580px;">
+      <img src="img/10.jpg" class="foto-img" />
+      <div class="foto-text">Días felices</div>
+    </div>
+    <div class="foto-box" style="top: 420px; left: 800px;">
+      <img src="img/11.jpg" class="foto-img" />
+      <div class="foto-text">Caminando juntos</div>
+    </div>
+    <div class="foto-box" style="top: 520px; left: 300px;">
+      <img src="img/12.jpg" class="foto-img" />
+      <div class="foto-text">Siempre tú</div>
+    </div>
+    <div class="foto-box" style="top: 520px; left: 600px;">
+      <img src="img/13.jpg" class="foto-img" />
+      <div class="foto-text">Mi mejor amiga</div>
+    </div>
+    <div class="foto-box" style="top: 600px; left: 420px;">
+      <img src="img/14.jpg" class="foto-img" />
+      <div class="foto-text">Te elijo</div>
+    </div>
+    <div class="foto-box" style="top: 680px; left: 150px;">
+      <img src="img/15.jpg" class="foto-img" />
+      <div class="foto-text">Por siempre juntos</div>
+    </div>
+  </div>
+  <div class="central-text">Te amo ❤<br>Por siempre juntos</div>
+</body>
+</html>
